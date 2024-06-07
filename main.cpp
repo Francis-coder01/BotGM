@@ -4,6 +4,7 @@
 #include <cstdint>
 #include "board.cpp"
 #include "fenSupporter.cpp"
+
 typedef struct engine {
     BoardRepresentation board;
 } Engine;
