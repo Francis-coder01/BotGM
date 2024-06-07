@@ -4,6 +4,7 @@ project(BotGM)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(BotGM main.cpp
-        Bitboard.cpp
-        FenSupporter.cpp
-        board.cpp)
+        fenSupporter.cpp
+        board.cpp
+        fenSupporter.h
+        board.h)

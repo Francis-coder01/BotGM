@@ -1,3 +1,6 @@
+
+## UCI PROTOCOL
+
 ### isready command:
 
 > This is used to synchronize the engine with the GUI.  

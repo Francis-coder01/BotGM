@@ -1,10 +1,7 @@
 #include <iostream>
 #include <bitset>
-#include <sstream>
-#include <cstdint>
-#include "board.cpp"
-#include "fenSupporter.cpp"
-
+#include <cstring>
+#include "fenSupporter.h"
 typedef struct engine {
     BoardRepresentation board;
 } Engine;
@@ -17,9 +14,9 @@ typedef struct engine {
 void testFEN(){
     Engine engine;
     parseFEN("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", engine.board);
-    if(!engine.board.blackHasQSideCastlingRights){
-        printf("")
-    }
+
+
+    std::cout << boardToFEN(engine.board);
 }
 
 

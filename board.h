@@ -1,3 +1,6 @@
+#ifndef BOTGM_BOARD_H
+#define BOTGM_BOARD_H
+
 #include <bitset>
 #include <cstdint>
 
@@ -17,7 +20,7 @@ enum COLOR {
 };
 
 typedef struct BoardRepresentation {
-    uint8_t squares[64] = {0};
+    uint8_t squares[64] { 0 };
     std::bitset<64> pieces[12];
     bool whiteToMove = true;
     bool whiteHasKSideCastlingRights = true;
@@ -28,3 +31,7 @@ typedef struct BoardRepresentation {
     bool hasEnPassant = false;
     uint32_t halfMoveClock = 0, fullMoveClock = 1;
 } BoardRepresentation;
+
+void printBoard(BoardRepresentation board);
+
+#endif //BOTGM_BOARD_H
