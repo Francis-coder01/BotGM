@@ -7,4 +7,8 @@ add_executable(BotGM main.cpp
         fenSupporter.cpp
         board.cpp
         fenSupporter.h
-        board.h)
+        board.h
+        UCI/command.cpp
+        UCI/command.h
+        UCI/commandExecutor.cpp
+        UCI/commandExecutor.h)

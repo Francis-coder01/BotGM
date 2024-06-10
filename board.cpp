@@ -1,30 +1,15 @@
-#include <bitset>
-#include <cstdint>
+#include <sstream>
+#include <iostream>
+#include "board.h"
 
-enum pieces {
-    NONE,
-    PAWN,
-    BISHOP,
-    KNIGHT,
-    ROOK,
-    QUEEN,
-    KING
-};
-
-enum COLOR {
-    WHITE = 8,
-    BLACK = 16
-};
-
-typedef struct BoardRepresentation {
-    uint8_t squares[64] = {0};
-    std::bitset<64> pieces[12];
-    bool whiteToMove = true;
-    bool whiteHasKSideCastlingRights = true;
-    bool whiteHasQSideCastlingRights = true;
-    bool blackHasKSideCastlingRights = true;
-    bool blackHasQSideCastlingRights = true;
-    uint8_t enPassantSquare = 0;
-    bool hasEnPassant = false;
-    uint32_t halfMoveClock = 0, fullMoveClock = 1;
-} BoardRepresentation;
+void printBoard(BoardRepresentation board){
+    std::ostringstream oss;
+    
+    for(int i = 0; i < 8; i++){
+        oss << "\n";
+        for(int j = 0; j < 8; j++){
+            oss << "" << std::endl;
+        }
+    }
+    std::cout << oss.str();
+}
